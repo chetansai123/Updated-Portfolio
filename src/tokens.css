@@ -1,0 +1,26 @@
+:root {
+  --page: #ebebea; --grid: rgba(0,0,0,0.05);
+  --card: #fff;
+  --sh: 0 1px 3px rgba(0,0,0,.07), 0 0 0 1px rgba(0,0,0,.05);
+  --sh-h: 0 4px 16px rgba(0,0,0,.10), 0 0 0 1px rgba(0,0,0,.06);
+  --text: #111; --t2: #4a4a4a; --t3: #9a9a9a;
+  --bd: #e2e2e0; --bd2: #c8c8c5; --accent: #3b6ee8;
+  --nbg: #fff; --nbd: #e0e0de; --ntx: #333; --ntx2: #888;
+  --rbg: #111; --rtx: #fff;
+  --pbg: #f4f4f2; --pbd: #d8d8d5; --ptx: #444;
+  --pon: #111; --pontx: #fff;
+  --tag: #f4f4f2; --tline: #e2e2e0; --tdot: #c0c0bd;
+}
+[data-theme="dark"] {
+  --page: #131313; --grid: rgba(255,255,255,0.038);
+  --card: #1e1e1e;
+  --sh: 0 1px 3px rgba(0,0,0,.3), 0 0 0 1px rgba(255,255,255,.06);
+  --sh-h: 0 4px 16px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.09);
+  --text: #f0f0f0; --t2: #999; --t3: #555;
+  --bd: #2a2a2a; --bd2: #3a3a3a; --accent: #5b8fff;
+  --nbg: #1c1c1c; --nbd: #2a2a2a; --ntx: #d0d0d0; --ntx2: #666;
+  --rbg: #eee; --rtx: #111;
+  --pbg: #252525; --pbd: #353535; --ptx: #aaa;
+  --pon: #eee; --pontx: #111;
+  --tag: #252525; --tline: #2a2a2a; --tdot: #444;
+}

@@ -1,0 +1,11 @@
+.contact-box { background: var(--card); border-radius: 18px; box-shadow: var(--sh); padding: 2.25rem; text-align: center; max-width: 500px; margin: 0 auto; }
+.contact-tagline { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; color: var(--text); margin-bottom: .5rem; }
+.contact-sub { font-size: .82rem; color: var(--t2); line-height: 1.7; margin-bottom: 1.5rem; }
+.ci-row { display: flex; align-items: center; justify-content: center; gap: .55rem; font-size: .8rem; color: var(--t2); margin-bottom: .5rem; }
+.ci-row a { color: var(--t2); text-decoration: none; transition: color .15s; }
+.ci-row a:hover { color: var(--text); }
+.mailto-btn { display: inline-flex; align-items: center; gap: .5rem; background: var(--rbg); color: var(--rtx); border-radius: 999px; padding: .62rem 1.5rem; font-size: .83rem; font-weight: 600; text-decoration: none; transition: opacity .15s; margin: 1.25rem 0; }
+.mailto-btn:hover { opacity: .85; }
+.socials { display: flex; justify-content: center; gap: .55rem; }
+.soc { width: 34px; height: 34px; border-radius: 10px; background: var(--tag); border: 1px solid var(--bd); display: flex; align-items: center; justify-content: center; color: var(--t3); text-decoration: none; transition: all .15s; }
+.soc:hover { border-color: var(--t3); color: var(--t2); }

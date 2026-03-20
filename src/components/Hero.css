@@ -1,0 +1,15 @@
+.hero-card { background: var(--card); border-radius: 18px; box-shadow: var(--sh); padding: 1.75rem 2rem; display: flex; gap: 1.75rem; align-items: flex-start; margin-bottom: 1.75rem; }
+.hero-av { width: 160px; height: 160px; border-radius: 14px; background: #3b6ee8; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 4.5rem; font-weight: 800; color: #fff; }
+.hero-r { flex: 1; min-width: 0; }
+.hero-top { display: flex; justify-content: flex-end; gap: .35rem; margin-bottom: .7rem; }
+.hsoc { color: var(--t3); text-decoration: none; transition: color .15s; display: flex; align-items: center; }
+.hsoc:hover { color: var(--t2); }
+.hero-name { font-size: 1.35rem; font-weight: 600; letter-spacing: -.02em; color: var(--text); margin-bottom: .2rem; }
+.hero-email { font-size: .77rem; color: var(--t3); margin-bottom: .85rem; }
+.hero-bio { font-size: .82rem; color: var(--t2); line-height: 1.78; }
+.hero-btns { display: flex; justify-content: center; gap: .85rem; margin-bottom: 2rem; flex-wrap: wrap; }
+.btn-d { background: var(--rbg); color: var(--rtx); border-radius: 999px; padding: .58rem 1.35rem; font-size: .82rem; font-weight: 600; text-decoration: none; transition: opacity .15s; display: inline-flex; align-items: center; gap: .4rem; }
+.btn-d:hover { opacity: .85; }
+.btn-l { background: var(--card); color: var(--text); border: 1.5px solid var(--bd2); border-radius: 999px; padding: .58rem 1.35rem; font-size: .82rem; font-weight: 500; text-decoration: none; transition: border-color .15s; display: inline-flex; align-items: center; gap: .4rem; }
+.btn-l:hover { border-color: var(--t3); }
+@media (max-width: 560px) { .hero-card { flex-direction: column; align-items: center; text-align: center; } .hero-top { justify-content: center; } .hero-av { width: 110px; height: 110px; font-size: 3rem; } }
