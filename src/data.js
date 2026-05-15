@@ -18,7 +18,7 @@ export const meta = {
   github: "https://github.com/chetansai123",
   linkedin: "https://www.linkedin.com/in/chetan-sai-96445a227/",
   resume:
-    "https://drive.google.com/file/d/1O9ChYqnTmdTdiBLDS2peXemW4AYIHoz1/view",
+    "https://drive.google.com/file/d/1k70HlX7_UzwBdogVmqTc5z8PMdbTo9_i/view?usp=sharing",
   bio: "A Full Stack Developer passionate about building responsive and interactive applications. I thrive on MERN stack adventures — crafting efficient back-end APIs with Node.js and Express while building clean front-end interfaces with React. Ready to explore any techstacks and wear multiple hats in a role. Currently deepening my understanding of Data Structures and Algorithms using Java. ",
 };
 
