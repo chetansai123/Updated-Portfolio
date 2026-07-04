@@ -9,6 +9,10 @@ import {
   AccentureCert,
   JPCert,
   KareerGuru,
+  ClipboardMac3,
+  // ClipboardMac2, ClipboardMac3 also available — swap the `img` below to try them
+  JobScraper3,
+  // JobScraper2, JobScraper3 also available — swap the `img` below to try them
 } from "./images/index";
 export const meta = {
   name: "Chetan Sai",
@@ -98,6 +102,24 @@ export const skills = [
 // To add project images: put screenshots in public/images/ and set img field
 // e.g. img: '/images/virtual-assistant.jpg'
 export const projects = [
+  {
+    title: "ClipBoard for macOS",
+    desc: "A native macOS menu bar app bringing Windows-style clipboard history to Mac — a global hotkey pops up a searchable list of everything you've recently copied, not just the last item. Vibe-coded end-to-end and exported from Xcode as a standalone app added to Login Items, so history clears only on shutdown, not on sleep or app close.",
+    stack: ["Swift", "SwiftUI", "AppKit", "Xcode"],
+    img: ClipboardMac3,
+    fallback:
+      "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=75&fit=crop",
+    link: "https://github.com/chetansai123/ClipBoardForMacOS",
+  },
+  {
+    title: "JobScraper",
+    desc: "A multi-agent job-hunting pipeline: an orchestrator agent coordinates dedicated sub-agents that scrape React/Node roles from ATS APIs and Google Search, filter them against experience/stack/salary criteria, verify every apply link is live, and render the shortlist as an HTML report — cutting thousands of noisy listings down to a handful that actually match.",
+    stack: ["Python", "Claude Agent SDK", "Jinja2", "Pydantic"],
+    img: JobScraper3,
+    fallback:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=75&fit=crop",
+    link: "https://github.com/chetansai123/JobScraper",
+  },
   {
     title: "KareerGuru",
     desc: "An AI-powered career assistant that generates resumes, cover letters, interview quizzes, and industry insights using Next.js and the Gemini API.",
