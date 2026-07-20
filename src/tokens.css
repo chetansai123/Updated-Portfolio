@@ -10,6 +10,7 @@
   --pbg: #f4f4f2; --pbd: #d8d8d5; --ptx: #444;
   --pon: #111; --pontx: #fff;
   --tag: #f4f4f2; --tline: #e2e2e0; --tdot: #c0c0bd;
+  --glass: rgba(255,255,255,.45); --glass-top: rgba(255,255,255,.75); --glass-bd: rgba(255,255,255,.8); --glass-sh: 0 30px 60px -24px rgba(0,0,0,.32); --glass-glow: rgba(59,110,232,.35); --glass-shine: rgba(255,255,255,.75);
 }
 [data-theme="dark"] {
   --page: #131313; --grid: rgba(255,255,255,0.038);
@@ -23,4 +24,5 @@
   --pbg: #252525; --pbd: #353535; --ptx: #aaa;
   --pon: #eee; --pontx: #111;
   --tag: #252525; --tline: #2a2a2a; --tdot: #444;
+  --glass: rgba(255,255,255,.06); --glass-top: rgba(255,255,255,.14); --glass-bd: rgba(255,255,255,.14); --glass-sh: 0 30px 60px -20px rgba(0,0,0,.7); --glass-glow: rgba(91,143,255,.45); --glass-shine: rgba(255,255,255,.18);
 }

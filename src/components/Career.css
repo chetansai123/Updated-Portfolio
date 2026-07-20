@@ -1,5 +1,7 @@
-.career-card { background: var(--card); border-radius: 18px; box-shadow: var(--sh); overflow: hidden; }
-.cc-top { display: flex; align-items: flex-start; gap: .85rem; padding: 1.4rem 1.6rem 1.15rem; border-bottom: 1px solid var(--bd); }
+.career-card { background: var(--card); border-radius: 18px; box-shadow: var(--sh); overflow: hidden; transition: box-shadow .3s ease, transform .3s ease; margin-bottom: 1rem; }
+.career-card:last-child { margin-bottom: 0; }
+.career-card:hover { box-shadow: var(--sh-h); }
+.cc-top { display: flex; align-items: flex-start; gap: .85rem; padding: 1.4rem 1.6rem 1.15rem; border-bottom: 1px solid var(--bd); cursor: pointer; }
 .cc-logo { width: 40px; height: 40px; border-radius: 10px; background: var(--tag); border: 1px solid var(--bd); display: flex; align-items: center; justify-content: center; font-size: .95rem; flex-shrink: 0; }
 .cc-info { flex: 1; }
 .cc-co { font-size: .92rem; font-weight: 700; color: var(--text); margin-bottom: .15rem; }
@@ -7,10 +9,16 @@
 .rpills { display: flex; gap: .35rem; flex-wrap: wrap; }
 .rp { font-size: .58rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .18rem .55rem; border-radius: 3px; border: 1px solid var(--pbd); background: var(--pbg); color: var(--ptx); cursor: pointer; transition: all .15s; }
 .rp.on { background: var(--pon); color: var(--pontx); border-color: var(--pon); }
-.cc-btn { margin-left: auto; width: 30px; height: 30px; border-radius: 50%; background: var(--page); border: 1px solid var(--bd); display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--t3); font-size: .72rem; flex-shrink: 0; }
+.cc-btn { margin-left: auto; width: 30px; height: 30px; border-radius: 50%; background: var(--page); border: 1px solid var(--bd); display: flex; align-items: center; justify-content: center; color: var(--t3); font-size: .72rem; flex-shrink: 0; pointer-events: none; }
+
+/* Grid-rows trick gives a smooth, JS-free height animation: opens on hover, auto-compacts on mouse leave */
+.cc-collapse { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .4s cubic-bezier(.4, 0, .2, 1); }
+.cc-collapse.open { grid-template-rows: 1fr; }
+.cc-collapse-inner { overflow: hidden; }
+
 .tl { padding: 0 1.6rem 1.4rem; position: relative; }
 .tl::before { content: ''; position: absolute; left: calc(1.6rem + 6px); top: 0; bottom: 20px; width: 1px; background: var(--tline); }
-.tr { position: relative; padding: 1.2rem 0 0 1.6rem; cursor: pointer; }
+.tr { position: relative; padding: 1.2rem 0 0 1.6rem; }
 .tr:last-child { padding-bottom: 0; }
 .tdot { position: absolute; left: 0; top: calc(1.2rem + 3px); width: 13px; height: 13px; border-radius: 50%; border: 2px solid var(--tdot); background: var(--card); transition: all .2s; display: flex; align-items: center; justify-content: center; }
 .tdot-in { width: 5px; height: 5px; border-radius: 50%; background: transparent; transition: all .2s; }
@@ -19,9 +27,7 @@
 .tr-title { font-size: .86rem; font-weight: 600; color: var(--t2); margin-bottom: .38rem; transition: color .15s; }
 .tr.open .tr-title { color: var(--accent); }
 .tr-date { display: inline-flex; align-items: center; gap: .3rem; border: 1px solid var(--bd2); border-radius: 5px; padding: .16rem .52rem; font-size: .65rem; color: var(--t3); margin-bottom: .38rem; }
-.tr-view { display: flex; align-items: center; gap: .22rem; font-size: .73rem; color: var(--accent); cursor: pointer; user-select: none; }
-.tr-chev { font-size: .56rem; transition: transform .25s; }
-.tr.open .tr-chev { transform: rotate(180deg); }
-.tr-body { margin-top: .5rem; }
+.tr-body { margin-top: .5rem; animation: tr-body-in .3s ease; }
 .tr-body ul { padding-left: 1rem; }
 .tr-body li { font-size: .78rem; color: var(--t2); line-height: 1.85; }
+@keyframes tr-body-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }

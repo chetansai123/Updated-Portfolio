@@ -4,7 +4,7 @@ export default function Certifications() {
   return (
     <section className="section" id="certifications">
       <h2 className="sec-title fu">Certifications</h2>
-      <div className="cert-grid">
+      <div className="cert-scroll">
         {certifications.map((c, i) => (
           <a className="cert-c fu" href={c.link} key={i} target="_blank" rel="noreferrer">
             <div className="cert-img">

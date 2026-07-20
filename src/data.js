@@ -12,6 +12,7 @@ import {
   ClipboardMac3,
   // ClipboardMac2, ClipboardMac3 also available — swap the `img` below to try them
   JobScraper3,
+  Scribbly,
   // JobScraper2, JobScraper3 also available — swap the `img` below to try them
 } from "./images/index";
 export const meta = {
@@ -22,7 +23,7 @@ export const meta = {
   github: "https://github.com/chetansai123",
   linkedin: "https://www.linkedin.com/in/chetan-sai-96445a227/",
   resume:
-    "https://drive.google.com/file/d/1k70HlX7_UzwBdogVmqTc5z8PMdbTo9_i/view?usp=sharing",
+    "https://drive.google.com/file/d/1gtgqqGqxeN8DpJkF7pRlsT7h28vmecP6/view?usp=sharing",
   bio: "A Full Stack Developer passionate about building responsive and interactive applications. I thrive on MERN stack adventures — crafting efficient back-end APIs with Node.js and Express while building clean front-end interfaces with React. Ready to explore any techstacks and wear multiple hats in a role. Currently deepening my understanding of Data Structures and Algorithms using Java. ",
 };
 
@@ -121,6 +122,15 @@ export const projects = [
     link: "https://github.com/chetansai123/JobScraper",
   },
   {
+    title: "Scribbly",
+    desc: "A hand-drawn notebook web app. You type plain notes; Scribbly formats them for you — colours, sizes, spacing — automatically, and even turns arrow-text into hand-drawn diagrams",
+    stack: ["HTML", "Javascript", "CSS"],
+    img: Scribbly,
+    fallback:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=75&fit=crop",
+    link: "https://github.com/chetansai123/Scribbly ",
+  },
+  {
     title: "KareerGuru",
     desc: "An AI-powered career assistant that generates resumes, cover letters, interview quizzes, and industry insights using Next.js and the Gemini API.",
     stack: [
@@ -170,6 +180,14 @@ export const projects = [
 // Update link to your actual Forage completion certificate PDF
 export const certifications = [
   {
+    name: "DSA Bootcamp Certificate",
+    org: "GeeksforGeeks",
+    date: "Oct 4–15, 2022",
+    link: "https://drive.google.com/file/d/1w_ux0QE2wC1ZXuRmSgneQJHpfNefdsUU/view",
+    // img: 'https://media.geeksforgeeks.org/gfg-gg-logo.svg',
+    img: GfgCert,
+  },
+  {
     name: "Software Engineering Virtual Experience",
     org: "JP Morgan Chase & Co. · Forage",
     date: "Aug 19, 2022",
@@ -184,13 +202,5 @@ export const certifications = [
     link: "https://drive.google.com/file/d/1dAk56vou348owRRz_X4oiXvYhVf9p-F8/view",
     // img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Accenture.svg/320px-Accenture.svg.png',
     img: AccentureCert,
-  },
-  {
-    name: "DSA Bootcamp Certificate",
-    org: "GeeksforGeeks",
-    date: "Oct 4–15, 2022",
-    link: "https://drive.google.com/file/d/1w_ux0QE2wC1ZXuRmSgneQJHpfNefdsUU/view",
-    // img: 'https://media.geeksforgeeks.org/gfg-gg-logo.svg',
-    img: GfgCert,
   },
 ];
