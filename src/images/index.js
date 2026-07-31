@@ -11,7 +11,7 @@ import ClipboardMac3 from "./ClipboardMac3.png";
 import JobScraper1 from "./JobScraper1.png";
 import JobScraper2 from "./JobScraper2.png";
 import JobScraper3 from "./JobScraper3.png";
-import Scribbly from "./Scribbly.jpeg";
+import Scribbly from "./Scribbly.png";
 
 export {
   GuessGame,

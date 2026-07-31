@@ -23,8 +23,8 @@ export const meta = {
   github: "https://github.com/chetansai123",
   linkedin: "https://www.linkedin.com/in/chetan-sai-96445a227/",
   resume:
-    "https://drive.google.com/file/d/1gtgqqGqxeN8DpJkF7pRlsT7h28vmecP6/view?usp=sharing",
-  bio: "A Full Stack Developer passionate about building responsive and interactive applications. I thrive on MERN stack adventures — crafting efficient back-end APIs with Node.js and Express while building clean front-end interfaces with React. Ready to explore any techstacks and wear multiple hats in a role. Currently deepening my understanding of Data Structures and Algorithms using Java. ",
+    "https://drive.google.com/file/d/1cleioVaIRXTYXZ9NWuJ-A7fwSTcthir9/view?usp=sharing",
+  bio: "A Full Stack Developer passionate about building responsive and interactive applications. I thrive on MERN stack adventures — crafting efficient back-end APIs with Node.js and Express while building clean front-end interfaces with React. Ready to explore any techstacks and wear multiple hats in a role. Currently I am looking for opportunities where i can contribute to products, work on end to end features and explore new technologies.",
 };
 
 export const experience = [
