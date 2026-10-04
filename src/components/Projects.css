@@ -1,5 +1,6 @@
-.proj-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem; perspective: 1400px; }
-@media (max-width: 640px) { .proj-grid { grid-template-columns: 1fr; } }
+.projects-section { width: min(1040px, calc(100vw - 2rem)); margin-left: 50%; transform: translateX(-50%); }
+.projects-intro { max-width: 520px; margin: -1rem auto 2.25rem; color: var(--t2); font-size: .8rem; line-height: 1.65; text-align: center; }
+.proj-grid { display: block; perspective: 1500px; }
 
 .proj-c {
   position: relative;
@@ -8,9 +9,15 @@
   backdrop-filter: blur(22px) saturate(180%);
   -webkit-backdrop-filter: blur(22px) saturate(180%);
   border: 1px solid var(--glass-bd);
-  border-radius: 22px;
+  border-radius: 28px;
   overflow: hidden;
-  display: flex; flex-direction: column;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(310px, .92fr);
+  grid-template-areas: 'media copy';
+  min-height: 350px;
+  position: sticky;
+  top: 88px;
+  margin-bottom: 9vh;
   text-decoration: none; color: inherit;
   box-shadow: var(--sh);
   transition: transform .5s cubic-bezier(.22, .85, .25, 1), box-shadow .5s ease, border-color .4s ease, backdrop-filter .4s ease;
@@ -39,8 +46,10 @@
   transition: transform .9s cubic-bezier(.2, .7, .2, 1), opacity .3s ease;
 }
 
+.proj-c:nth-child(even) { grid-template-areas: 'copy media'; grid-template-columns: minmax(310px, .92fr) minmax(0, 1.08fr); }
+.proj-c:last-child { margin-bottom: 0; }
 .proj-c:hover, .proj-c.fu.in:hover {
-  transform: translateY(-12px) scale(1.025) rotateX(2deg);
+  transform: translateY(-5px) scale(1.008) rotateX(1deg);
   box-shadow: var(--glass-sh), 0 0 0 1px var(--accent), 0 0 32px -4px var(--glass-glow);
   border-color: var(--accent);
   backdrop-filter: blur(28px) saturate(200%);
@@ -52,13 +61,14 @@
 /* Entrance: rises from behind with a subtle tilt, then settles flat — "back to front" */
 .proj-c.fu {
   opacity: 0;
-  transform: translateY(60px) scale(.82) perspective(1000px) rotateX(10deg);
+  transform: translateY(70px) scale(.94) perspective(1000px) rotateX(6deg);
   transition: opacity .75s cubic-bezier(.16, .8, .24, 1), transform .75s cubic-bezier(.16, .8, .24, 1);
 }
 .proj-c.fu.in { opacity: 1; transform: none; }
-.proj-grid .proj-c:nth-child(2n).fu { transition-delay: .14s; }
+.proj-grid .proj-c:nth-child(2n).fu { transition-delay: 0s; }
 
-.proj-img { position: relative; width: 100%; height: 210px; overflow: hidden; flex-shrink: 0; border-bottom: 1px solid var(--glass-bd); background: var(--tag); display: flex; align-items: center; justify-content: center; }
+.proj-img { grid-area: media; position: relative; width: 100%; min-height: 350px; overflow: hidden; background: var(--tag); display: flex; align-items: center; justify-content: center; border-right: 1px solid var(--glass-bd); }
+.proj-c:nth-child(even) .proj-img { border-right: 0; border-left: 1px solid var(--glass-bd); }
 .proj-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s cubic-bezier(.22, .85, .25, 1), filter .4s ease; display: block; }
 .proj-c:hover .proj-img img { transform: scale(1.1); filter: brightness(1.03); }
 .proj-img::after {
@@ -70,12 +80,14 @@
 }
 .proj-c:hover .proj-img::after { opacity: 1; }
 
-.proj-body { position: relative; z-index: 2; padding: 1rem 1.1rem; display: flex; flex-direction: column; flex: 1; }
+.proj-body { grid-area: copy; position: relative; z-index: 2; padding: 2.25rem 2.1rem; display: flex; flex-direction: column; min-width: 0; }
+.proj-kicker { display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: var(--t3); font-size: .65rem; margin-bottom: auto; padding-bottom: 2rem; }
+.proj-kicker span:first-child { width: 1.8rem; height: 1.8rem; border: 1px solid var(--bd2); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: var(--text); }
 .proj-head { display: flex; align-items: flex-start; justify-content: space-between; gap: .35rem; margin-bottom: .4rem; }
-.proj-name { font-size: .84rem; font-weight: 600; color: var(--text); line-height: 1.35; flex: 1; }
+.proj-name { font-family: 'Playfair Display', serif; font-size: 1.55rem; font-weight: 500; letter-spacing: -.02em; color: var(--text); line-height: 1.18; flex: 1; }
 .proj-arr { color: var(--t3); font-size: .82rem; flex-shrink: 0; transition: all .3s cubic-bezier(.22, .85, .25, 1); }
 .proj-c:hover .proj-arr { color: var(--accent); transform: translate(3px, -3px) scale(1.15); }
-.proj-desc { font-size: .74rem; color: var(--t2); line-height: 1.65; flex: 1; margin-bottom: .7rem; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.proj-desc { font-size: .78rem; color: var(--t2); line-height: 1.7; margin: .65rem 0 1.25rem; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
 .proj-tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: auto; }
 .proj-tag { background: var(--tag); color: var(--t3); padding: .15rem .5rem; border-radius: 5px; font-size: .64rem; border: 1px solid var(--bd); transition: transform .25s ease, background .25s ease, color .25s ease, border-color .25s ease; }
 .proj-c:hover .proj-tag { background: var(--pon); color: var(--pontx); border-color: var(--pon); }
@@ -84,3 +96,20 @@
 .proj-c:hover .proj-tag:nth-child(3) { transition-delay: .08s; }
 .proj-c:hover .proj-tag:nth-child(4) { transition-delay: .11s; }
 .proj-c:hover .proj-tag { transform: translateY(-1px); }
+
+@media (max-width: 760px) {
+  .projects-section { width: 100%; margin-left: 0; transform: none; }
+  .projects-intro { margin-bottom: 1.5rem; }
+  .proj-grid { display: grid; gap: 1.4rem; }
+  .proj-c, .proj-c:nth-child(even) { position: relative; top: auto; margin: 0; min-height: 0; grid-template-columns: 1fr; grid-template-areas: 'media' 'copy'; }
+  .proj-img, .proj-c:nth-child(even) .proj-img { min-height: 0; height: 220px; border: 0; border-bottom: 1px solid var(--glass-bd); }
+  .proj-body { padding: 1.25rem; }
+  .proj-kicker { padding-bottom: 1.2rem; }
+  .proj-name { font-size: 1.3rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .proj-c, .proj-c.fu { transition-duration: .01ms; }
+  .proj-c:hover, .proj-c.fu.in:hover { transform: none; }
+  .proj-c:hover::after { display: none; }
+}

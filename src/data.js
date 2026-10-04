@@ -128,7 +128,7 @@ export const projects = [
     img: Scribbly,
     fallback:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=75&fit=crop",
-    link: "https://github.com/chetansai123/Scribbly ",
+    link: "https://myscribbly.vercel.app/",
   },
   {
     title: "KareerGuru",

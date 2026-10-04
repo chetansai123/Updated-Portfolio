@@ -1,9 +1,24 @@
-.hero-card { background: var(--card); border-radius: 18px; box-shadow: var(--sh); padding: 1.75rem 2rem; display: flex; gap: 1.75rem; align-items: flex-start; margin-bottom: 1.75rem; }
-.hero-av { width: 160px; height: 160px; border-radius: 14px; background: #3b6ee8; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 4.5rem; font-weight: 800; color: #fff; }
+.hero-card { background: var(--card); border-radius: 24px; box-shadow: var(--sh); padding: 2rem 2.15rem; display: flex; gap: 2.25rem; align-items: center; margin-bottom: 1.75rem; overflow: hidden; position: relative; }
+.hero-card::after { content: ''; position: absolute; width: 240px; height: 240px; border-radius: 50%; left: -120px; bottom: -155px; background: color-mix(in srgb, var(--accent) 16%, transparent); filter: blur(18px); pointer-events: none; }
+.hero-showcase { width: 190px; flex: 0 0 190px; display: grid; justify-items: center; gap: .9rem; position: relative; z-index: 1; }
+.hero-cube-scene { width: 166px; height: 166px; border: 0; padding: 0; background: transparent; perspective: 850px; cursor: pointer; }
+.hero-cube { width: 100%; height: 100%; position: relative; display: block; transform-style: preserve-3d; transform: rotateX(-7deg) rotateY(var(--cube-turn)); transition: transform .85s cubic-bezier(.2,.8,.2,1); }
+.hero-cube-scene:hover .hero-cube { transform: rotateX(-7deg) rotateY(calc(var(--cube-turn) - 8deg)) scale(1.025); }
+.hero-cube-scene:focus-visible { outline: 3px solid var(--accent); outline-offset: 8px; border-radius: 18px; }
+.hero-cube-face { position: absolute; inset: 0; overflow: hidden; border-radius: 18px; border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--glass-bd)); background: var(--card); box-shadow: 0 22px 42px rgba(0,0,0,.18); backface-visibility: hidden; }
+.hero-cube-face img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-cube-face::after { content: ''; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, rgba(6,9,18,.88)); }
+.hero-cube-face > span { position: absolute; z-index: 1; left: .8rem; right: .8rem; bottom: .72rem; color: #fff; font-size: .7rem; line-height: 1.25; font-weight: 650; text-align: left; }
+.hero-cube-face-1 { transform: rotateY(0deg) translateZ(83px); }
+.hero-cube-face-2 { transform: rotateY(90deg) translateZ(83px); }
+.hero-cube-face-3 { transform: rotateY(180deg) translateZ(83px); }
+.hero-cube-face-4 { transform: rotateY(-90deg) translateZ(83px); }
+.hero-cube-hint { color: var(--t3); font-size: .67rem; line-height: 1.3; text-align: center; }
 .hero-r { flex: 1; min-width: 0; }
 .hero-top { display: flex; justify-content: flex-end; gap: .35rem; margin-bottom: .7rem; }
 .hsoc { color: var(--t3); text-decoration: none; transition: color .15s; display: flex; align-items: center; }
 .hsoc:hover { color: var(--t2); }
+.hero-role { color: var(--accent); font-size: .73rem; font-weight: 650; margin-bottom: .3rem; }
 .hero-name { font-size: 1.35rem; font-weight: 600; letter-spacing: -.02em; color: var(--text); margin-bottom: .2rem; }
 .hero-email { font-size: .77rem; color: var(--t3); margin-bottom: .85rem; }
 .hero-bio { font-size: .82rem; color: var(--t2); line-height: 1.78; }
@@ -12,4 +27,18 @@
 .btn-d:hover { opacity: .85; }
 .btn-l { background: var(--card); color: var(--text); border: 1.5px solid var(--bd2); border-radius: 999px; padding: .58rem 1.35rem; font-size: .82rem; font-weight: 500; text-decoration: none; transition: border-color .15s; display: inline-flex; align-items: center; gap: .4rem; }
 .btn-l:hover { border-color: var(--t3); }
-@media (max-width: 560px) { .hero-card { flex-direction: column; align-items: center; text-align: center; } .hero-top { justify-content: center; } .hero-av { width: 110px; height: 110px; font-size: 3rem; } }
+@media (max-width: 620px) {
+  .hero-card { flex-direction: column; align-items: center; text-align: center; padding: 1.7rem 1.2rem; }
+  .hero-top { justify-content: center; }
+  .hero-showcase { width: 164px; flex-basis: auto; }
+  .hero-cube-scene { width: 142px; height: 142px; }
+  .hero-cube-face-1 { transform: rotateY(0deg) translateZ(71px); }
+  .hero-cube-face-2 { transform: rotateY(90deg) translateZ(71px); }
+  .hero-cube-face-3 { transform: rotateY(180deg) translateZ(71px); }
+  .hero-cube-face-4 { transform: rotateY(-90deg) translateZ(71px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cube { transition-duration: .01ms; }
+  .hero-cube-scene:hover .hero-cube { transform: rotateX(-7deg) rotateY(var(--cube-turn)); }
+}
