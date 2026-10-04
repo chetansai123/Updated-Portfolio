@@ -5,11 +5,11 @@
 .proj-c {
   position: relative;
   isolation: isolate;
-  background: linear-gradient(155deg, var(--glass-top), var(--glass) 55%);
-  backdrop-filter: blur(22px) saturate(180%);
+  background: linear-gradient(132deg, var(--glass-top), var(--glass) 58%, color-mix(in srgb, var(--accent) 5%, transparent));
+  backdrop-filter: blur(26px) saturate(160%);
   -webkit-backdrop-filter: blur(22px) saturate(180%);
   border: 1px solid var(--glass-bd);
-  border-radius: 28px;
+  border-radius: 24px;
   overflow: hidden;
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(310px, .92fr);
@@ -27,8 +27,8 @@
 .proj-c::before {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(160deg, var(--glass-shine) 0%, transparent 38%);
-  opacity: .8;
+  background: linear-gradient(145deg, rgba(255,255,255,.72) 0%, rgba(255,255,255,.14) 24%, transparent 48%);
+  opacity: .9;
   pointer-events: none;
   z-index: 1;
   transition: opacity .4s ease;
@@ -46,13 +46,12 @@
   transition: transform .9s cubic-bezier(.2, .7, .2, 1), opacity .3s ease;
 }
 
-.proj-c:nth-child(even) { grid-template-areas: 'copy media'; grid-template-columns: minmax(310px, .92fr) minmax(0, 1.08fr); }
 .proj-c:last-child { margin-bottom: 0; }
 .proj-c:hover, .proj-c.fu.in:hover {
   transform: translateY(-5px) scale(1.008) rotateX(1deg);
   box-shadow: var(--glass-sh), 0 0 0 1px var(--accent), 0 0 32px -4px var(--glass-glow);
   border-color: var(--accent);
-  backdrop-filter: blur(28px) saturate(200%);
+  backdrop-filter: blur(30px) saturate(175%);
   -webkit-backdrop-filter: blur(28px) saturate(200%);
 }
 .proj-c:hover::before { opacity: .5; }
@@ -67,8 +66,7 @@
 .proj-c.fu.in { opacity: 1; transform: none; }
 .proj-grid .proj-c:nth-child(2n).fu { transition-delay: 0s; }
 
-.proj-img { grid-area: media; position: relative; width: 100%; min-height: 350px; overflow: hidden; background: var(--tag); display: flex; align-items: center; justify-content: center; border-right: 1px solid var(--glass-bd); }
-.proj-c:nth-child(even) .proj-img { border-right: 0; border-left: 1px solid var(--glass-bd); }
+.proj-img { grid-area: media; position: relative; width: 100%; min-height: 350px; overflow: hidden; background: #d9dcdf; display: flex; align-items: center; justify-content: center; border-right: 1px solid var(--glass-bd); }
 .proj-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s cubic-bezier(.22, .85, .25, 1), filter .4s ease; display: block; }
 .proj-c:hover .proj-img img { transform: scale(1.1); filter: brightness(1.03); }
 .proj-img::after {
@@ -79,6 +77,8 @@
   transition: opacity .4s ease;
 }
 .proj-c:hover .proj-img::after { opacity: 1; }
+.proj-img-label { position: absolute; z-index: 1; left: .9rem; bottom: .8rem; color: rgba(255,255,255,.9); font-size: .64rem; font-weight: 650; letter-spacing: .01em; text-shadow: 0 1px 8px rgba(0,0,0,.55); opacity: 0; transform: translateY(5px); transition: opacity .3s ease, transform .3s ease; }
+.proj-c:hover .proj-img-label, .proj-c:focus-visible .proj-img-label { opacity: 1; transform: none; }
 
 .proj-body { grid-area: copy; position: relative; z-index: 2; padding: 2.25rem 2.1rem; display: flex; flex-direction: column; min-width: 0; }
 .proj-kicker { display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: var(--t3); font-size: .65rem; margin-bottom: auto; padding-bottom: 2rem; }
@@ -101,8 +101,8 @@
   .projects-section { width: 100%; margin-left: 0; transform: none; }
   .projects-intro { margin-bottom: 1.5rem; }
   .proj-grid { display: grid; gap: 1.4rem; }
-  .proj-c, .proj-c:nth-child(even) { position: relative; top: auto; margin: 0; min-height: 0; grid-template-columns: 1fr; grid-template-areas: 'media' 'copy'; }
-  .proj-img, .proj-c:nth-child(even) .proj-img { min-height: 0; height: 220px; border: 0; border-bottom: 1px solid var(--glass-bd); }
+  .proj-c { position: relative; top: auto; margin: 0; min-height: 0; grid-template-columns: 1fr; grid-template-areas: 'media' 'copy'; }
+  .proj-img { min-height: 0; height: 220px; border: 0; border-bottom: 1px solid var(--glass-bd); }
   .proj-body { padding: 1.25rem; }
   .proj-kicker { padding-bottom: 1.2rem; }
   .proj-name { font-size: 1.3rem; }

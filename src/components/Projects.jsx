@@ -11,6 +11,7 @@ export default function Projects() {
             <div className="proj-img">
               <img src={p.img} alt={p.title}
                 onError={e => { e.target.onerror = null; e.target.src = p.fallback }} />
+              <span className="proj-img-label">{p.title}</span>
             </div>
             <div className="proj-body">
               <div className="proj-kicker">

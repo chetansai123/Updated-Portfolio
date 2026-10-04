@@ -11,9 +11,11 @@ export default function Certifications() {
               <img src={c.img} alt={c.name} onError={e => { e.target.style.display = 'none' }} />
             </div>
             <div className="cert-body">
+              <div className="cert-kicker"><span>{String(i + 1).padStart(2, '0')}</span><span>Open credential ↗</span></div>
               <div className="cert-name">{c.name}</div>
               <div className="cert-org">{c.org}</div>
               <div className="cert-date">{c.date}</div>
+              <p className="cert-note">A verified learning milestone included in my engineering journey.</p>
             </div>
           </a>
         ))}

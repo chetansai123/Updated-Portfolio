@@ -18,6 +18,8 @@ export default function Hero() {
     <section className="section" id="hero">
       <div className="hero-card fu">
         <div className="hero-showcase">
+          <span className="hero-float hero-float-top">React <i>·</i> Node</span>
+          <span className="hero-float hero-float-bottom">REST APIs <i>·</i> UI systems</span>
           <button
             className="hero-cube-scene"
             type="button"
