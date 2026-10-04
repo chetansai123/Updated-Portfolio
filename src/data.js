@@ -24,7 +24,7 @@ export const meta = {
   linkedin: "https://www.linkedin.com/in/chetan-sai-96445a227/",
   resume:
     "https://drive.google.com/file/d/1cleioVaIRXTYXZ9NWuJ-A7fwSTcthir9/view?usp=sharing",
-  bio: "A Full Stack Developer passionate about building responsive and interactive applications. I thrive on MERN stack adventures — crafting efficient back-end APIs with Node.js and Express while building clean front-end interfaces with React. Ready to explore any techstacks and wear multiple hats in a role. Currently I am looking for opportunities where i can contribute to products, work on end to end features and explore new technologies.",
+  bio: "A full-stack engineer who enjoys turning unclear problems into useful, reliable products. I work across interfaces, APIs, data, and the details that make software feel finished — adapting to the domain and tools the problem calls for. I’m looking for opportunities where I can own features end to end, learn quickly, and contribute to thoughtful teams.",
 };
 
 export const experience = [
@@ -162,6 +162,8 @@ export const projects = [
     desc: "A voice-command assistant that helps you access and open pages and applications from your running program using voice commands.",
     stack: ["Python"],
     img: VirtualAssistant,
+    imageFit: "contain",
+    imagePosition: "left center",
     fallback:
       "https://images.unsplash.com/photo-1625225233840-695456021cde?w=600&q=75&fit=crop",
     link: "https://github.com/chetansai123/VirtualAssistant",
@@ -175,7 +177,10 @@ export const projects = [
       "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600&q=75&fit=crop",
     link: "https://github.com/chetansai123/GuessingGame",
   },
-];
+].sort((a, b) => {
+  const order = { KareerGuru: 0, Scribbly: 1, "ClipBoard for macOS": 2, JobScraper: 3 };
+  return (order[a.title] ?? 99) - (order[b.title] ?? 99);
+});
 
 // Update link to your actual Forage completion certificate PDF
 export const certifications = [
