@@ -7,7 +7,7 @@ export default function Projects() {
       <p className="projects-intro fu">Selected builds, stacked like working notes. Scroll to browse the deck.</p>
       <div className="proj-grid">
         {projects.map((p, i) => (
-          <a className="proj-c fu" href={p.link} key={i} target="_blank" rel="noreferrer">
+          <a className="proj-c fu" href={p.link} key={i} target="_blank" rel="noreferrer" style={{ '--stack-index': i }}>
             <div className="proj-img">
               <img src={p.img} alt={p.title}
                 onError={e => { e.target.onerror = null; e.target.src = p.fallback }} />

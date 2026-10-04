@@ -16,7 +16,7 @@
   grid-template-areas: 'media copy';
   min-height: 350px;
   position: sticky;
-  top: 88px;
+  top: calc(112px + (var(--stack-index) * 9px));
   margin-bottom: 9vh;
   text-decoration: none; color: inherit;
   box-shadow: var(--sh);
