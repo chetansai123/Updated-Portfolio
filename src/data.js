@@ -23,7 +23,7 @@ export const meta = {
   github: "https://github.com/chetansai123",
   linkedin: "https://www.linkedin.com/in/chetan-sai-96445a227/",
   resume:
-    "https://drive.google.com/file/d/1cleioVaIRXTYXZ9NWuJ-A7fwSTcthir9/view?usp=sharing",
+    "https://drive.google.com/file/d/19S6omo_NBSlogd9pDqDUi570srHy7wsd/view?usp=sharing",
   bio: "A full-stack engineer who enjoys turning unclear problems into useful, reliable products. I work across interfaces, APIs, data, and the details that make software feel finished — adapting to the domain and tools the problem calls for. I’m looking for opportunities where I can own features end to end, learn quickly, and contribute to thoughtful teams.",
 };
 
